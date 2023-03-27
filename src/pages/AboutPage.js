@@ -35,8 +35,8 @@ const AboutPage = () => {
                         </CardBody>
                     </Card>
                 </Col>
-                <Col className='bg-light mt-3' md='12'>
-                    <Card>
+                <Col>
+                    <Card className='bg-light mt-3' >
                         <CardBody>
                             <blockquote className='blockquote'>
                                 <p>

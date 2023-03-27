@@ -5,7 +5,7 @@ body {
 h1,
 h2,
 h3,
-.card-body > .card-title {
+.card-body>.card-title {
     font-family: 'Lobster', cursive;
 }
 
