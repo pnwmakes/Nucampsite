@@ -3,8 +3,11 @@ import { useDispatch } from 'react-redux';
 import { Outlet, ScrollRestoration } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import './App.css';
 import { fetchCampsites } from './features/campsites/campsitesSlice';
+import { fetchComments, fetchPartners } from './features/partners/partnersSlice';
+import { fetchPromotions } from './features/promotions/promotionsSlice';
+import './App.css';
+
 
 
 function App() {
@@ -12,6 +15,8 @@ function App() {
 
     useEffect(() => {
         dispatch(fetchCampsites());
+        dispatch(fetchPartners());
+        dispatch(fetchPromotions());
     }, [dispatch]);
 
     return (
