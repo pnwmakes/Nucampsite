@@ -23,7 +23,7 @@ const router = createBrowserRouter(
             <Route path='contact' element={<ContactPage />} />
             <Route path='about' element={<AboutPage />} />
             <Route path='directory' element={<CampsitesDirectoryPage />} />
-            <Route path='directory/:campsiteId' element={<CampsiteDetailPage />} />
+            {/* <Route path='directory/:campsiteId' element={<CampsiteDetailPage />} /> */}
         </Route>
     )
 );

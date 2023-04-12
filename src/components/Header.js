@@ -1,16 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
-import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem, } from 'reactstrap';
+import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import NucampLogo from '../app/assets/img/logo.png';
+import UserLoginForm from '../features/user/UserLoginForm';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <Navbar dark color='primary' sticky='top' expand='md'>
-            <NavbarBrand className='ms-5' href="/">
-                <img src={NucampLogo} alt="NuCamp Logo" className='float-start' />
+            <NavbarBrand className='ms-5' href='/'>
+                <img src={NucampLogo} alt='NuCamp Logo' className='float-start' />
                 <h1 className='mt-1'>NuCamp</h1>
             </NavbarBrand>
 
@@ -37,10 +38,11 @@ const Header = () => {
                             <i className='fa fa-address-card fa-lg' /> Contact
                         </NavLink>
                     </NavItem>
+                    <UserLoginForm />
                 </Nav>
             </Collapse>
         </Navbar>
     );
-}
+};
 
 export default Header;

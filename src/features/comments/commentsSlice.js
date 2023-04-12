@@ -8,9 +8,22 @@ const initialState = {
 const commentsslice = createSlice({
     name: 'comments',
     initialState,
+    reducers: {
+        addComment: (state, action) => {
+            console.log('addComment action.payload: ', action.payload);
+            console.log('addComment state.commentsArray: ', state.commentsArray);
+            const newComment = {
+                id: state.commentsArray.length + 1,
+                ...action.payload,
+            };
+            state.commentsArray.push(newComment);
+        }
+    }
 });
 
 export const commentsReducer = commentsslice.reducer;
+
+export const { addComment } = commentsslice.actions;
 
 export const selectCommentsByCampsiteId = (campsiteId) => (state) => {
     return state.comments.commentsArray.filter(
