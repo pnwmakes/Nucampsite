@@ -37,3 +37,5 @@ const CampsiteDetailPage = () => {
         </Container>
     );
 };
+
+export default CampsiteDetailPage;

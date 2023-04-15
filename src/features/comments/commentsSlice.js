@@ -30,3 +30,4 @@ export const selectCommentsByCampsiteId = (campsiteId) => (state) => {
         (comment) => comment.campsiteId === parseInt(campsiteId)
     );
 };
+
